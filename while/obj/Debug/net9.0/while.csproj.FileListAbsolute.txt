@@ -1,0 +1,14 @@
+C:\Users\51478718889\Desktop\BackEnd\while\bin\Debug\net9.0\while.exe
+C:\Users\51478718889\Desktop\BackEnd\while\bin\Debug\net9.0\while.deps.json
+C:\Users\51478718889\Desktop\BackEnd\while\bin\Debug\net9.0\while.runtimeconfig.json
+C:\Users\51478718889\Desktop\BackEnd\while\bin\Debug\net9.0\while.dll
+C:\Users\51478718889\Desktop\BackEnd\while\bin\Debug\net9.0\while.pdb
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.AssemblyInfoInputs.cache
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.AssemblyInfo.cs
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.csproj.CoreCompileInputs.cache
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.dll
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\refint\while.dll
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.pdb
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\while.genruntimeconfig.cache
+C:\Users\51478718889\Desktop\BackEnd\while\obj\Debug\net9.0\ref\while.dll
