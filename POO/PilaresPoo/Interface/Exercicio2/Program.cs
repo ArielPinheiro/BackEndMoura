@@ -1,4 +1,5 @@
-﻿using Exercicio2;
+﻿using System.Reflection.Metadata;
+using Exercicio2;
 // List<Fatura> listafatura = new List<Fatura>();
 // List<Relatorio> listaRelatorio = new List<Relatorio>();
 // List<Contrato> listaContrato = new List<Contrato>();
@@ -28,11 +29,11 @@ do
             break;
 
         case 2:
-            Console.WriteLine($"Cadastrar Relatório em desenvolvimento");
+            CadastrarRelatorios();
             break;
 
         case 3:
-            Console.WriteLine($"Cadastrar Contratos em desenvolvimento");
+            CadastrarContratos();
             break;
 
         case 4:
@@ -40,11 +41,11 @@ do
             break;
 
         case 5:
-            Console.WriteLine($"Listar Relatórios em desenvolvimento");
+            ListarRelatorios();
             break;
 
         case 6:
-            Console.WriteLine($"Listar Contratos em desenvolvimento");
+            ListarContratos();
             break;
 
         case 0:
@@ -84,12 +85,26 @@ void CadastrarFaturas()
 
 void CadastrarRelatorios()
 {
-    
+    Console.WriteLine($"Digite o Nome do Responsavel: ");
+    string Responsavel = Console.ReadLine();
+
+    Console.WriteLine($"Digite o Relatorio: ");
+    string TextoRelatorio = Console.ReadLine();
+
+    Relatorio relat = new Relatorio(Responsavel, TextoRelatorio);
+    Documentos.Add(relat);
 }
 
 void CadastrarContratos()
 {
-    
+    Console.WriteLine($"Digite o Nome do Responsavel: ");
+    string Nome = Console.ReadLine();
+
+    Console.WriteLine($"Digite o Contrato: ");
+    string TextoClausula = Console.ReadLine();
+
+    Contrato Contrat = new Contrato(Nome, TextoClausula);
+    Documentos.Add(Contrat);
 }
 
 void ListarFaturas()
@@ -106,12 +121,26 @@ void ListarFaturas()
 
 void ListarRelatorios()
 {
-    
+    Console.WriteLine($"Listando Relatorios:");
+    foreach (var item in Documentos)
+    {
+        if (item is Relatorio)
+        {
+            item.Imprimir();
+        }
+    }
 }
 
 void ListarContratos()
 {
-    
+    Console.WriteLine($"Listando Contrato:");
+    foreach (var item in Documentos)
+    {
+        if (item is Contrato)
+        {
+            item.Imprimir();
+        }
+    }
 }
 
 
