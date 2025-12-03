@@ -1,0 +1,181 @@
+/* 1 forma de utilizar uma fonte */
+/* @import url('https://fonts.googleapis.com/css2?family=Oi&display=swap'); */
+
+/* 2 forma de utilizar uma fonte */
+@font-face {
+    font-family: Billabong;
+    src: url(../assets/fonts/Billabong/billabong.ttf),
+        url(../assets/fonts/Billabong/billabong_regular.otf);
+}
+
+/* variaveis */
+:root {
+    --cor-preto: #000000;
+    --cor-azul: #2686cc;
+    --cor-branco: #ffffff;
+    --cor-cinza-escuro1: #b6b6b6;
+    --cor-cinza-escuro2: #4D4D4D;
+    --cor-cinza-escuro3: #7D7D7D;
+    --cor-cinza-escuro4: #D1D1D1;
+    --cor-cinza-medio: #e5e5e5;
+    --cor-cinza-claro: #fafafa;
+    --cor-roxo-claro: #8a2be2;
+    --cor-vermelho-escuro: #8B104D;
+    --cor-cinza-escuroPaleta: #8097B7;
+    --cor-conzia-escuroPaleta2: #706F8B;
+    --cor-azul-escuroPaleta: #1F32FF;
+    --cor-fundo-paleta: #CDE2FF;
+
+
+    --borda: 3px solid var(--cor-vermelho-escuro);
+    --borda-arredondada: 3px;
+
+    --tamanho-fonte-lg: 20px;
+    --tamanho-fonte-md: 16px;
+    --tamanho-fonte-sm: 14px;
+}
+
+/* SELETOR GLOBAL */
+* {
+    padding: 0;
+    /*espaço interno*/
+    margin: 0;
+    /*espaço externo*/
+    box-sizing: border-box;
+    /*atribui espaços internos/externos e bordas no tamanho final do box*/
+    font-family: "Segoe UI", sans-serif;
+    outline-color: #8B104D;
+}
+
+body {
+    background-color: #CDE2FF;
+}
+
+h1 {
+    position: absolute;
+    /*altera a posição do elemento*/
+    z-index: -1;
+    /*camadas do elemento*/
+    opacity: 0;
+    /*opacidade*/
+}
+
+.formulario-botao-azul {
+    background-color: var(--cor-azul);
+    border-radius: var(--borda-arredondada);
+    border: none;
+    /*tira a borda*/
+    height: 35px;
+
+    color: var(--cor-branco);
+    font-size: var(--tamanho-fonte-sm);
+}
+
+
+
+.formulario-campos>input {
+    border: var(--borda);
+    height: 35px;
+    background-color: var(--cor-cinza-claro);
+
+    color: var(--cor-cinza-escuro2);
+    font-size: var(--tamanho-fonte-sm);
+    border-radius: var(--borda-arredondada);
+
+}
+
+.formulario-campos>label {
+
+    font-size: var(--tamanho-fonte-sm);
+    color: var(--cor-cinza-escuro2);
+    font-weight: 600;
+    /**/
+
+}
+
+.estilo-formulario {
+    background-color: var(--cor-branco);
+    border: var(--borda);
+    width: 100%;
+
+}
+
+#campo-file {
+    display: none;
+}
+
+#labell {
+    display: inline-block;
+    width: 300px;
+    color: #8B104D;
+    background-color: #6DA9FB;
+    text-align: center;
+    /*height: 35px;*/
+    padding: 10px;
+}
+
+.cabecalho {
+    background-color: #8097B7;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    border-bottom: var(--borda);
+}
+
+.cabecalho>nav {
+    width: 85%;
+    max-width: 900px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#logo-mobile {
+    display: none;
+
+}
+
+.cabecalho-acoes {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cabecalho-acoes>a {
+    display: flex;
+    align-items: center;
+}
+
+.foto-perfil {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    /*mantem a proporção do objeto so redimencionando ele */
+    object-position: center;
+    border-radius: 50%;
+}
+
+/*Responsivo*/
+
+@media only screen and (max-width: 500px) {
+
+    #logo-mobile {
+        display: initial;
+    }
+
+    #logo-desktop {
+        display: none;
+    }
+}
+
+/*@media only screen and (min-width: 500px) {
+    #logo-mobile{
+        display:none
+    }
+    #logo-desktop{
+        display:initial
+    }
+}*/
