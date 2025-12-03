@@ -13,10 +13,10 @@ namespace CrudMoura.Controllers
             new Fruta{Id = 1, Nome = "Morango", Preco = 5.99f, Quantidade = 10, Categoria = "tropical"},
             new Fruta{Id = 2, Nome = "Abacate", Preco = 5.90f, Quantidade = 5, Categoria = "Imalaia"},
             new Fruta{Id = 3, Nome = "Limão", Preco = 2.90f, Quantidade = 22, Categoria = "Malasia"},
-            new Fruta{Id = 4, Nome = "Laranja", Preco = 6.90f, Quantidade = 26, Categoria = "Do Silvestre Do Imalaia Da Amazonia do paraguai na coreia do norte adoçicada"}
+            new Fruta{Id = 4, Nome = "Laranja", Preco = 6.90f, Quantidade = 26, Categoria = "Tropical Silvestre Do Imalaia Da Amazonia No Paraguai Central Da India Perto Da Fronteira da China No Mar Negro Do Japão na Australia Dentro Da Austria "}
         };
 
-        public FrutaController(ILogger<FrutaController> logger)
+        public FrutaController(ILogger<FrutaController>logger)
         {
             _logger = logger;
         }
