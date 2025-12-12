@@ -1,56 +1,54 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
 <link rel="stylesheet" href="~/css/login.css">
 
+<script defer>
+  let usuarioNovoCadastro = "@TempData[key: "UsuarioNovoCadastrado"]";
+  if (usuarioNovoCadastro == "Cadastrado") {
+    alert("Usuario Cadastrado Com Sucesso! Relogue e Logue novamente para navegar em nossa plataforma 😎")
+  }
+</script>
+
 <h1>Tela principal login - DevConnect</h1>
-    <main>
-      <div>
-        <!-- formulario -->
-        <form class="estilo-formulario">
-          <img
-            src="~/images/logo-devconnect-lg.svg"
-            alt="Logo DevConnect"
-          />
+<main>
+  <div>
+    <!-- formulario -->
+    <form class="estilo-formulario">
+      <img src="~/images/logo-devconnect-lg.svg" alt="Logo DevConnect"/>
 
-          <div class="formulario-campos">
-            <label >Nome de usuário:</label>
-            <input type="text" name="" id="" />
-          </div>
+      <div class="formulario-campos">
+        <label>Nome de usuário:</label>
+        <input type="text" name="" id="" />
+      </div>
 
-          <div class="formulario-campos">
-            <label for="">Senha:</label>
-            <input type="password" name="" id="" />
-          </div>
+      <div class="formulario-campos">
+        <label for="">Senha:</label>
+        <input type="password" name="" id="" />
+      </div>
 
-          <button class="formulario-botao-azul" type="submit">Entrar</button>
+      <button class="formulario-botao-azul" type="submit">Entrar</button>
 
-          <p class="text2">ou</p>
+      <p class="text2">ou</p>
 
-          <a asp-controller = "Feed" asp-action = "Index"">Tela Feed</a>
+      <a asp-controller="Feed" asp-action="Index"">Tela Feed</a>
         </form>
 
         <section id="secao-cadastro" class="estilo-formulario">
-          <p>Não tem uma conta? <a asp-controller = "Cadastro" asp-action = "Index">Cadastre-se</a></p>
+        <p>Não tem uma conta? <a asp-controller="Usuario" asp-action="Index">Cadastre-se</a></p>
 
-          <p class="text">ou</p>
-          
-          <a asp-controller = "Perfil" asp-action = "Index"">   Tela Perfil</a>
+        <p class="text">ou</p>
+
+        <a asp-controller="Usuario" asp-action="Perfil"">Tela Perfil</a>
         </section>
 
         <p>Obtenha o aplicativo</p>
 
-        <section id="secao-instalacao">
-          <img
-            src="~/images/app-store.svg"
-            alt="Imagem falando da instalação no App Store"
-          />
+        <section id=" secao-instalacao">
+          <img src="~/images/app-store.svg" alt="Imagem falando da instalação no App Store" />
 
-          <img
-            src="~/images/google-play.svg"
-            alt="Imagem falando da instalação no Play Store"
-          />
-        </section>
-      </div>
-    </main>
+          <img src="~/images/google-play.svg" alt="Imagem falando da instalação no Play Store" />
+          </section>
+  </div>
+</main>

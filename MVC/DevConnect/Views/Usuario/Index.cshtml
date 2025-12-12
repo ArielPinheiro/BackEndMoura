@@ -1,0 +1,58 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model DevConnect.Models.TbUsuario
+
+<script defer>
+  let usuarioNovoCadastro = "@ViewBag.UsuarioNovoCadastrado";
+  if (usuarioNovoCadastro == "Nao Cadastrado") {
+    alert("Não foi possivel cadastrar esse usuario 😑! fale com o um dos nossos administradores.")
+  }
+</script>
+
+<h1>Tela De Cadastro Do Usuario</h1>
+<link rel="stylesheet" href="~/css/cadastro.css">
+<main>
+  <div>
+    <form class="estilo-formulario" asp-action="Index" asp-controller="Usuario" enctype="multipart/form-data-">
+      <img src="~/images/logo-devconnect-lg.svg" alt="Logo DevConnect" />
+      <div>
+        <label>cadastrar-se para a comunidade exclusiva de
+          desenvolvedores(a)</label>
+      </div>
+      <div class="formulario-campos">
+        <label>Digite seu nome completo:</label>
+        <input type="text" asp-for="NomeCompleto" id="" />
+      </div>
+
+      <div class="formulario-campos">
+        <label for="">Digite seu Email:</label>
+        <input type="text" asp-for="Email" id="" />
+      </div>
+
+      <div class="formulario-campos">
+        <label for="">Digite seu nome de usuario:</label>
+        <input type="text" asp-for="NomeUsuario" id="" />
+      </div>
+
+      <div class="formulario-campos">
+        <label for="">Digite sua Senha:</label>
+        <input type="password" asp-for="Senha" id="" />
+      </div>
+      <div class="formulario-campos">
+        <label id="labell" for="campo-file">Upload:</label>
+        <input type="file" asp-for="FotoPerfilUrl" id="campo-file" />
+      </div>
+
+      <button class="formulario-botao-azul" type="submit">
+        Finalizar cadastro
+      </button>
+
+      <p class="text2">
+        Ao Se Cadastrar, Vôce Concorda Com Nossos Termos, Politica de Dados
+        e Política de Cookies.
+      </p>
+    </form>
+    <section id="secao-cadastro" class="estilo-formulario">
+      <p>Tem uma conta <a asp-controller="Home" asp-action="Index">Conecte-se</a></p>
+    </section>
+  </div>
+</main>
